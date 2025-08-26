@@ -1,0 +1,22 @@
+name: Ice Cream Theme
+type: theme
+description: A custom theme for a school exercise
+core_version_requirement: ^10 || ^11
+base theme: false
+version: 0.0.1
+libraries:
+  - icecream_theme/global
+
+regions:
+  header: Header
+  # primary_menu: Primary menu
+  # secondary_menu: Secondary menu
+  menu: Menu
+  # hero: Hero
+  # highlighted: Highlighted
+  # help: Help
+  # content: Content
+  sidebar: Sidebar
+  # content_below: Content below
+  footer: Footer
+  content: Content

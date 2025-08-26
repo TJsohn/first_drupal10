@@ -1,0 +1,13 @@
+/* Custom Theme Styles */
+
+.custom-logo {
+  /* Add custom styling for your logo */
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Footer styling */
+.block-system-powered-by-block {
+  text-align: center;
+  padding: 10px;
+}

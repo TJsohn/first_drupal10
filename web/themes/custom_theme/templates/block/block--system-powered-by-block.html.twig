@@ -1,0 +1,20 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Custom theme implementation for Powered by block.
+ *
+ * The Powered by block is customized to show custom text instead of Drupal.
+ *
+ */
+#}
+{% block content %}
+  {{ attach_library('olivero/powered-by-block') }}
+  <span>
+    {% trans %}Powered by{% endtrans %}
+    <a href="https://www.example.com">{% trans %}My Awesome Website{% endtrans %}</a>
+    <span class="custom-logo" role="img" aria-label="{{ 'Custom Logo'|t }}">
+      <!-- Custom logo or remove the SVG include if not needed -->
+    </span>
+  </span>
+{% endblock %}
