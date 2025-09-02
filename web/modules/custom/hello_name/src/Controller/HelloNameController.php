@@ -8,13 +8,14 @@ use Drupal\Core\Url;
 
 class HelloNameController extends ControllerBase
 {
-    public function content()
+    public function content($name)
     {
-        $url = Url::fromRoute('hello_name.form');
-        $link = Link::fromTextAndUrl($this->t('Go to the form'), $url)->toString();
+        $session = \Drupal::request()->getSession();
+        $session->set('greeting_name', $name);
+        $greetingName = $session->get('greeting_name');
 
         return [
-            '#markup' => $this->t('Hello, [Your Name]! @link', ['@link' => $link]),
+            '#markup' => $this->t('Hello, @name!', ['@name' => $greetingName]),
         ];
     }
 
