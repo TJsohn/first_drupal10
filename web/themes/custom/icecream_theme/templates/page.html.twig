@@ -15,8 +15,13 @@
   </head>
   <body>
     <header class="header">
-    {{ page.header }}
-        {{second_module_variable}}
+      {% if logo %}
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+        </a>
+      {% endif %}
+      {{ page.header }}
+      {{second_module_variable}}
       <br>
       <div class="heading">
         <h1>Welcome</h1>
@@ -31,13 +36,11 @@
       </div>
       {% if page.sidebar %}
       <div class="sidebar">
-
       </div>
       {% endif %}
     </main>
-
-    <footer class="footer">
-        {{ page.footer }}
-    </footer>
+    <div id="footer">
+      {{ page.footer }}
+    </div>
   </body>
 </html>

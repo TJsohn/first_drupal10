@@ -256,7 +256,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/global';
 
 /**
  * Settings:
@@ -910,3 +910,10 @@ $settings['trusted_host_patterns'] = [
   '^my-first-drupal10-app\.lndo\.site$', // Your Lando domain
   '^localhost$',                        // Localhost
 ];
+
+// $settings['config_exclude_modules'] = [
+//   'devel',
+//   'webprofiler',
+// ];
+
+// $config['system.logging']['error_level'] = 'verbose';
