@@ -1,0 +1,10 @@
+name: Group task 1
+description: "Adding a simple React app inside Drupal"
+type: module
+core_version_requirement: ^10 || ^11
+
+# libraries:
+  # - onlineshop/onlineshop_app
+
+# dependencies:
+#   - drupal:node

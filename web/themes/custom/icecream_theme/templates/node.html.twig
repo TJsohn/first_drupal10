@@ -1,0 +1,20 @@
+{#
+ * @file
+ * Theme override for all nodes (ice cream style)
+ #}
+<article class="article-card">
+  {% if label %}
+    <h2>{{ label }}</h2>
+  {% endif %}
+  {% if display_submitted %}
+    <div class="submitted">
+      {{ author_name }} · {{ date }}
+    </div>
+  {% endif %}
+  <div class="article-content">
+    {{ content.body ? content.body : content }}
+  </div>
+  <div class="links">
+    {{ content.links }}
+  </div>
+</article>

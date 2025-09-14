@@ -1,44 +1,40 @@
-{# <div id="header">
-  {{ page.header }}
-</div>
-<div id="content">
-  {{ page.content }}
-</div>
-<div id="footer">
-  {{ page.footer }}
-</div> #}
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
   </head>
-  <body>
+  <body class="{{ body_class }}{% if app.request.attributes.get('_route') == 'contact.site_page' %} page-contact{% endif %}">
+    {{ attach_library('icecream_theme/global') }}
+
     <header class="header">
       {% if logo %}
-        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+        <a href="{{ path('<front>') }}" class="site-logo">
           <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
         </a>
       {% endif %}
-      {{ page.header }}
-      {{second_module_variable}}
-      <br>
-      <div class="heading">
-        <h1>Welcome</h1>
-      </div>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
       <nav class="menu">
-        {{ page.menu }}
+        {{ page.header }}
       </nav>
     </header>
+
+    {% if page.hero %}
+      <div class="hero">
+        {{ page.hero }}
+      </div>
+    {% endif %}
+
     <main class="main">
       <div class="content">
         {{ page.content }}
       </div>
       {% if page.sidebar %}
-      <div class="sidebar">
-      </div>
+        <div class="sidebar">
+          {{ page.sidebar }}
+        </div>
       {% endif %}
     </main>
+
     <div id="footer">
       {{ page.footer }}
     </div>

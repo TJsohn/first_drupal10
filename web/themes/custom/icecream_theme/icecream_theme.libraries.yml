@@ -1,12 +1,9 @@
 global:
-  # version: 1.x
   css:
     theme:
       css/global.css: {}
-
-# global-scripts:
-#   version: 1.x
-#   # js:
-#   #   js/script.js: {}
-#   dependencies:
-#     - core/jquery
+      css/icecream-article.css: {}
+  js:
+    js/menu-toggle.js: {}
+  dependencies:
+    - core/jquery
