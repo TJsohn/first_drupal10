@@ -3,7 +3,6 @@
 namespace Drupal\onlineshop\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\HttpFoundation\Response;
 
 class OnlineshopController extends ControllerBase
 {
