@@ -10,3 +10,5 @@ This project is for learning purposes only.
 - React Hello
 
 ## Custom Modules
+
+- Palindrome Checker
