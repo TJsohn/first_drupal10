@@ -1,0 +1,5 @@
+name: Palindrome Checker
+type: module
+description: A simple custom module for checking palindrome. (Task 2, CMS-REACT25K)
+core_version_requirement: ^10 || ^11
+package: Custom

@@ -1,0 +1,5 @@
+name: 'my_generated_module'
+type: module
+description: 'A practice 02 from CMS class to generate custom module automatically'
+package: Custom
+core_version_requirement: ^10 || ^11
